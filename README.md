@@ -1,5 +1,53 @@
-This repository builds a handwritten digit recognizer using a custom NumPy MLP and compares it with scikit-learn’s MLP.
-Model: A multi-layer perceptron implemented in models.mlp_digit.MLP with ReLU hidden layers, softmax output, cross-entropy loss, Kaiming initialization, and mini-batch SGD.
-Training: train.ipynb loads train.csv, normalizes inputs, performs a simple grid search over hidden layers, learning rate, epochs, and batch size, trains the custom MLP, evaluates on a validation split, prints a confusion matrix, and saves the best model.
-Evaluation: evaluate.ipynb loads the saved model, predicts on test.csv, and writes a Kaggle-ready submission to submission.csv.
-Comparison: compare_scikit.ipynb trains scikit-learn’s MLPClassifier with matched hyperparameters to benchmark against our implementation.
+# Handwritten Digit Recognizer (NumPy MLP vs scikit-learn)
+
+This repository implements a handwritten digit recognizer from scratch using **NumPy**, and benchmarks it against **scikit-learn's MLPClassifier**.
+
+---
+
+## Model
+
+- Custom **multi-layer perceptron (MLP)** implemented in `models/mlp_digit.py`
+- **Hidden layers:** ReLU activations
+- **Output layer:** Softmax
+- **Loss function:** Cross-Entropy
+- **Initialization:** Kaiming He
+- **Optimizer:** Mini-batch Stochastic Gradient Descent (SGD)
+
+
+
+## Training 
+
+1. Loads `train.csv`
+2. Normalizes input features
+3. **Grid search** over:
+   - Number of hidden layers
+   - Learning rate
+   - Epochs
+   - Batch size
+4. Trains and validates on dataset split
+5. Prints **confusion matrix**
+6. Saves **best model**
+
+---
+
+## Evaluation
+
+- Loads trained model
+- Predicts `test.csv`
+- Generates **Kaggle-ready** `submission.csv`
+
+---
+
+## Comparison 
+
+Benchmarks **scikit-learn's MLPClassifier** with equivalent hyperparameters:
+- Accuracy metrics
+- Training time
+- Convergence comparison
+
+---
+
+## Requirements
+Listed in `requirements.txt`
+## Usage 
+In order to test it out, you need to get the Kaggle dataset and place it into the src/data folder. Then create a venv with requirements installed.
