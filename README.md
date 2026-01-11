@@ -15,7 +15,7 @@ This repository implements a handwritten digit recognizer from scratch using **N
 
 
 
-## Training 
+## Training
 
 1. Loads `train.csv`
 2. Normalizes input features
@@ -38,7 +38,7 @@ This repository implements a handwritten digit recognizer from scratch using **N
 
 ---
 
-## Comparison 
+## Comparison
 
 Benchmarks **scikit-learn's MLPClassifier** with equivalent hyperparameters:
 - Accuracy metrics
@@ -49,5 +49,5 @@ Benchmarks **scikit-learn's MLPClassifier** with equivalent hyperparameters:
 
 ## Requirements
 Listed in `requirements.txt`
-## Usage 
+## Usage
 In order to test it out, you need to get the Kaggle dataset and place it into the src/data folder. Then create a venv with requirements installed.
