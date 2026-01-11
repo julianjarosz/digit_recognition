@@ -5,3 +5,4 @@ numpy
 pandas
 matplotlib
 python-dotenv
+tensorflow>=2.10
